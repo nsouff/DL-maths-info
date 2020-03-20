@@ -5,7 +5,7 @@ TOPDF=pdflatex
 OPT=-output-directory
 TARGET=target
 SRC=src
-FILE=td5.tex
+FILE=td3.tex
 
 
 

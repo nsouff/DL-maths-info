@@ -1,17 +1,27 @@
-\documentclass[../td5.tex]{subfiles}
-
-
+\documentclass[td5.tex]{subfiles}
 
 \begin{document}
 
 \section{Exercice 14}
+
 \subsection*{Question 1}
-Montrons que $\lim\limits_{k \to +\infty} f_k(x_k) = f(x)$. Fixons $\varepsilon > 0$.
+Montrons que $\lim\limits_{k \to +\infty} f_k(x_k) = f(x)$. On a :
 \begin{align*}
   \forall k \in \mathbb{N}~|f_k(x_k)-f(x)| &= |f_k(x_k)-f(x_k)+f(x_k)-f(x)|\\
                                            &\leq |f_k(x_k)-f(x_k)|+|f(x_k)-f(x)|
 \end{align*}
 
+
+$(f_k)_{k \geq 0}$ converge uniformément vers $f$ sur $I$ donc :
+\begin{itemize}
+\item $\exists n_0 \in \mathbb{N} ~ \forall k \in \mathbb{N} ~ k \geq n_0 \implies~|f_k(x_k) - f(x_k)| < \varepsilon$
+\item $f$ est continue sur $I$ donc $\lim\limits_{k \to +\infty} f(x_k) = f(x)$.
+\end{itemize}
+Finalement $\exists n_1 \in \mathbb{N} ~ \forall k \in \mathbb{N}, ~ k \geq n_1 \implies~|f_k(x_k) - f(x)| < \varepsilon$
+
+
+\subsection*{Question 2}
+Il suffit de trouver une suite $(x_k)_{k \geq 0}$ d'élements de $I$ convergeant vers $x \in I$ et de montrer que $\lim\limits_{k \to +\infty} f_k(x_k) \neq f(x)$.
 
 
 \end{document}

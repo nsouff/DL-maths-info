@@ -1,0 +1,25 @@
+\documentclass[td5.tex]{subfiles}
+
+
+\begin{document}
+\section{Exercice 7}
+\subsection{Question 1}
+$f_n(x) = e^{-nx}sin(2nx)$
+$x > 0,~ |f_n(x)| = |e^{-nx}||sin(2nx)| \leq e^{-nx}$ et $\lim\limits_{n \to + \infty} e^{-nx} = 0$ \\
+Donc $f_n \xrightarrow{s} 0$
+\textbf{Convergence uniforme}
+Supposons que $f_n \xrightarrow{u} 0$, alors soit $\varepsilon < e^{-\frac{\pi}{4}},~\exists n_0 \in \mathbb{N}$tel que \\
+$\forall n \geq n_0,~\forall x \in [0, +\infty[ |f_n(x)| < \varepsilon$,
+Or, prenons $x = \frac{\pi}{4n_0}$, on a alors: \\
+\begin{align*}
+  &|e^{-n_0 \frac{\pi}{4n_0}} sin(2n_0 \frac{\pi}{4n_0})| \\
+  = &e^{- \frac{\pi}{4}} sin(\frac{\pi}{2})\\
+  = &e^{- \frac{\pi}{4}} \geq \varepsilon \\
+\end{align*}
+Donc $f_n \not\xrightarrow{u} 0 sur ]0, +\infty[$ et donc également sur $[0, +\infty[$.
+Mais $f_n \xrightarrow{u} 0$ sur $[a, +\infty[,~a > 0$
+car soit $\varepsilon > 0,~|f_n(x)| \leq e^{-nx} \leq {-na}$ \\
+Donc si on prend $n_0$ tel que $e^{-n_0 a} < \varepsilon$,
+on a bien $|f_n(x)| < \varepsilon,~\forall n\geq n_0,~\forall x \in [a, +\infty[$
+
+\end{document}

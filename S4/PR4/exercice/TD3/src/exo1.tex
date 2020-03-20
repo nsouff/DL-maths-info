@@ -1,0 +1,38 @@
+\documentclass[td3.tex]{subfiles}
+
+\begin{document}
+
+\section{Exercice 1}
+2B, 4N. \\
+$X(\Omega) = \{2,\dots,~5\}$\\
+Soient:\\
+$B_i$: "la ième boule tiré est blanche", \\
+$N_i$: "la ième boule tiré est noir".\\
+\begin{align*}
+  \mathbb{P}(X=2) & =\mathbb{P}(B_1 \cap B_2) \\
+  &=\mathbb{P}(B_1) \cdot \mathbb{P}(B_2|B_1) \\
+  &=\frac{2}{6}\cdot \frac{1}{5} = \frac{1}{15} \\
+\end{align*}
+
+\begin{align*}
+  \mathbb{P}(X=3) &=\mathbb{P}(B_1 \cap N_2 \cap B_3) + \mathbb{P}(N_1 \cap B_2 \cap B_3) \\
+  &=\frac{8}{15}
+\end{align*}
+
+On continue ainsi de suite et on obtient finalement \\
+\begin{center}
+
+\begin{tabular}{|c|c|c|c|c|}
+  \hline
+  \textbf{$k$} & 2 & 3 & 4 & 5 \\
+  \hline
+  \textbf{$\mathbb{P}(X=k)$} & $\frac{1}{15}$ & $\frac{2}{15}$ & $\frac{4}{15}$ & $\frac{8}{15}$ \\
+  \hline
+\end{tabular}
+\end{center}
+
+
+
+
+
+\end{document}

@@ -1,0 +1,37 @@
+\documentclass[td5.tex]{subfiles}
+
+
+
+\begin{document}
+
+\section{Exercice 4}
+\subsection*{Question 1}
+
+  \textbf{Convergence simple:}\\
+  $\forall n \in \mathbb{N},~f_n(1) = 0$ \\
+  $\forall x \ne 1$ clairement $\lim\limits_{n \to +\infty}f_n(x) = 0$\\
+  \textbf{Convergence uniforme:}\\
+  On suppose $\varepsilon < 1$\\
+  Si $1 - \varepsilon < x$, on a $\forall n \in \mathbb{N}$:\\
+  $$x^n(1-x)\leq 1 - x < \varepsilon$$\\
+  Si $x \leq 1 - \varepsilon$, on a :
+  $$x^n(1-x) \leq (1-\varepsilon)^n(1-x) \leq (1-\varepsilon)^n$$\\
+  Si on prend donc $n_0$ tel que $(1-\varepsilon)^{n_0} < \varepsilon$ on a:
+  $x^n(1-x) < \varepsilon,~\forall n \geq n_0 $\\
+  Ainsi $\forall n \geq n_0,~\forall x \in [0, 1],~f_n(x) < \varepsilon$
+
+\subsection{Question 2}
+$g_n(x) = x^n sin(\pi x) = x^n sin(\pi - \pi x) = x^n sin(\pi(1-x))$\\
+De plus $\forall x \geq 0,~ sin(x) \leq x$ Donc: \\
+\begin{align*}
+  &sin(\pi (1-x)) \leq \pi (1-x)  \\
+  \Rightarrow ~&x^n sin (\pi(1-x)) \leq \pi x^n (1-x),~ \forall x \in [0, 1] \\
+  \Rightarrow ~&0 \leq g_n(x) \leq f_n(x) \forall x \in [0, 1]\\
+\end{align*}
+On sait que $f_n \xrightarrow{u} 0$, alors \\
+$\forall \varepsilon > 0 \exists n_0$ tel que $\forall n \geq n_0,~\forall x |f_n(x)| < \varepsilon$
+Ainsi $\forall x, ~\forall n \geq n_0$\\
+$|g_n(x)| \leq |f_n(x)| < \varepsilon$
+Donc $g_n \xrightarrow{u} 0$
+
+\end{document}

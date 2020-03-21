@@ -1,0 +1,27 @@
+\documentclass[td4.tex]{subfiles}
+\begin{document}
+\section{Exercice 5}
+\subsection{Question 1}
+$
+\phi(e_1,e_1) = \phi(e_2, e_2) = \frac{\pi}{2} \\
+\phi(e_1,e_2) = 0 \\
+\phi(e_1,e_3) = 0 \\
+\phi(e_2,e_3) = 2
+$
+De plus $\phi$ est clairement symétrique ainsi, soit $M$ la matrice de $\phi$ dans la base $(e_1, e_2, e_3)$, on a :
+$$ M =
+\begin{pmatrix}
+  \frac{\pi}{2} & 0 & 0 \\
+  0 & \frac{\pi}{2} & 2 \\
+  0 & 2 & \pi
+\end{pmatrix}
+$$
+
+\subsection{Question 2}
+Soit $f = \begin{pmatrix} a \\ b \\ c \end{pmatrix}\text{dans la base}(e_1,e_2,e_3),~\phi$ orthogonale à $e_1$ et $e_3$, alors:
+$0 = \phi(f,e_1) = \begin{pmatrix}a & b & c\end{pmatrix}\begin{pmatrix} \frac{\pi}{2} \\ 0 \\ 0 \end{pmatrix} = a\frac{\pi}{2} \implies a = 0$\\
+Et \\
+$0 = \phi(f, e_3) = \begin{pmatrix}0 & b & c\end{pmatrix} \begin{pmatrix}0 \\ 2 \\ \pi \end{pmatrix} = 2b + c\pi \implies b = -\frac{\pi}{2}c$ \\
+Donc $f \in F \iff f = -\lambda \frac{\pi}{2} e_2 + \lambda$, ainsi une base de $F$ est $(sin(x), 1)$
+
+\end{document}

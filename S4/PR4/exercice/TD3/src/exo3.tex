@@ -1,0 +1,33 @@
+\documentclass[td3.tex]{subfiles}
+\begin{document}
+\section{Exercice 3}
+$X$ prend ses valeurs dans $\{0,\dots,n\}$\\
+\textbf{Calcul de l'ésperance}\\
+\begin{align*}
+  \mathbb{E}(X) &= \sum_{k=0}^n k \mathbb{P}(X=k) \\
+  &= \sum_{i=1}^n \mathbb{E}(\mathds{1}_{A_i})~~~ \text{par linéarité}
+\end{align*}
+Posons $Y=\mathds{1}_{A_i}$, on a alors $Y(\Omega) = \{0,~1 \}$ \\
+$\mathbb{P}(Y=1) = \mathbb{P}(A_i) = p_i$ \\
+$\mathbb{P}(Y=0) = 1-p_i$ \\
+$\mathbb{E}(\mathds{1_{A_i}}) = p_i$
+Ainsi, $\mathbb{E}(X) = \sum_{i=1}^n p_i$. \\ \\
+\textbf{Calcul de la variance}\\
+$\mathrm{Var}(X) = \mathbb(E(X^2)) - \mathbb{E}(X)^2$
+\begin{align*}
+  \mathbb{E}(X^2) &= \mathbb{E}[(\sum_{i=1}^n\mathds{1}_{A_i})^2] \\
+  &=\mathbb{E}[\sum_{i=1}^n \mathds{1}_{A_i}^2 + 2\sum_{1 \leq i < k \leq n}\mathbb{E}(\mathds{1}_{A_i}\mathds{1}_{A_j})] \\
+\end{align*}
+
+$\mathbb{E}(\mathds{1}_{A_i}^2) = 1^2 \mathbb{P}(\mathds{1}_{A_i} = 1) = p_i$\\
+Posons $W = \mathds{1}_{A_i}\mathds{1}_{A_j}$, on a, \\
+\begin{align*}
+ \mathbb{P}(W=1) &= P(\{\mathds{1}_{A_i} = 1\} \cap \{\mathds{1}_{A_j} = 1\}) \\
+ &= \mathbb{P}(A_i \cap A_j) = q_ij
+\end{align*}
+Et $\mathbb{P}(W=0) = 1 - q_ij$ \\
+Ainsi, $\mathbb{E}(W) = q_ij$, donc
+$$\mathrm{Var}(X) = \sum_{i=1}^n p_i + 2\sum_{1 \leq i < j \leq n} q_ij -(\sum_{j=1}^n p_i)^2$$
+
+
+\end{document}

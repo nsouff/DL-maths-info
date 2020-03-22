@@ -1,0 +1,16 @@
+\documentclass[td3.tex]{sufiles}
+\begin{document}
+\section{Exercice 8}
+Soit $Z = X + Y$
+\begin{align*}
+  \mathbb{P}(Z = k) &= \mathbb{P}(\cup_{i=0}^k \{X=i\} \cap \{ Y=k-i\}) \\
+  &= \sum_{i=0}^k \mathbb{P}(X=i) \mathbb{P}(Y=k-i) \text{(car X et Y sont indépendant}\\
+  &= \sum_{i=0}^k \frac{\lambda^i}{i!}e^{-\lambda} \cdot \frac{\mu^{k-i}}{(k-i)!}e^{-\mu} \\
+  &= e^{-(\lambda + \mu)} \sum_{i=0}^k \frac{k! \lambda^i \mu^{k-i}}{i! (k-i)!} \\
+  &= e^{-(\lambda + \mu)} \sum_{i=0}^k \binom{i}{k} \lambda^i \mu^{k-i} \\
+  &= \frac{e^{-(\lambda + \mu)}}{k!}(\lambda + \mu)^k
+\end{align*}
+Ainsi $Z$ suit une loi de Poisson de parmaètre $(\lambda + \mu)$. \\
+De même on peut montrer par récurrence que la somme de $n$ variables aléatoires $X_1,\dots,X_n$ indépendantes, de loi de Poisson de paramètres réspectifs $\lambda_1,\dots,\lambda_n$ suit une loi de Poisson de paramètres $(\lambda_1 + \dots + \lambda_n)$.
+
+\end{document}

@@ -1,0 +1,43 @@
+\documentclass[td5.tex]{subfiles}
+
+\begin{document}
+
+\section{Exercice 22}
+$\alpha \geq 0,~\forall n \in \mathbb{N}^*~\forall x \in [0,1]~f_n(x)=n^{\alpha}x^n(1-x)$
+
+\subsection*{Question 1}
+\begin{itemize}
+\item $f_n(1) = 0$.
+\item $\forall x \in [0,1[$, par croissance comparée entre $n^{\alpha}$ et $x^n$, on a $\lim\limits_{n \to +\infty}f_n(x)~=~0$.
+\end{itemize}
+Donc $(f_n)_{n>0}$ converge simplement vers $0$ sur $[0,1]$.
+
+\subsection*{Question 2}
+$a \in ]0,1[$. Fixons $n$, étudions alors $f_n(x)$ :
+
+\begin{align*}
+  \forall x \in [0,1],~f^{'}_{n}(x) &= n^{\alpha}x^{n-1}n(1-x)-n^{\alpha}x^n \\
+                                    &= n^{\alpha}x^{n-1}\left[ n(1-x) - x \right] \\
+                                    &= n^{\alpha}x^{n-1}\left[ -(n+1)x + n \right]
+\end{align*}
+Donc $f^{'}_{n}(x)$ est du même signe que $-(n+1)x + n$, donc $f_n$ croissante sur $[0, \frac{n}{n+1}]$ puis décroissante sur $[\frac{n}{n+1}, 1]$.
+
+Pour $n$ assez grand, $\frac{n}{n+1}$ tend vers $1$, donc $\exists N \in \mathbb{N}~\forall n \geq N~a < \frac{n}{n+1}$, donc $\forall n \geq N~f_n(x) \leq f_n(a)$ et $f_n(a)$ tend vers $0$ donc $\lim\limits_{n \to +\infty}||f_n||=0$.
+
+\subsection*{Question 3}
+Sur $[0,1]$.
+\begin{align*}
+  ||f_n||_{\infty}~=~f_n\left(\frac{n}{n+1}\right) &= n^{\alpha} \left(\frac{n}{n+1}\right)^n \left(1-\frac{n}{n+1}\right)\\
+                                        &= n^{\alpha} \left(\frac{n}{n+1}\right)^n \frac{1}{n+1}\\
+                                        &= \frac{n^{\alpha}}{n+1} \left(\frac{n}{n+1}\right)^n 
+\end{align*}
+Remarquons que $\left(\frac{n}{n+1}\right)^n = \left(1-\frac{1}{n+1}\right)^n \sim \mathrm{e}^{-1}$ et $\frac{n^{\alpha}}{n+1} \sim n^{\alpha-1}$.
+\\Donc $||f_n||_{\infty} \sim n^{\alpha-1}\mathrm{e}^{-1}$. Si $\alpha < 1$ alors $||f_n||_{\infty}$ converge vers $0$.
+
+\subsection*{Question 4}
+Avec $0 \leq \alpha < 1$, on a $(f_n)$ qui converge uniformément vers $f$, donc:
+\[
+  \lim\limits_{n \to +\infty}\int_0^1 f_n(x)\mathrm{d}x=\int_0^1 f(x)\mathrm{d}x=0
+\]
+
+\end{document}

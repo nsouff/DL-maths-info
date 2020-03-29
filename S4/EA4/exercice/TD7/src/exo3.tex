@@ -1,0 +1,19 @@
+\documentclass[td7.tex]{subfiles}
+
+\begin{document}
+
+\section*{Exercice 3}
+On doit associer chaque écrou à sa vis. Pour cela, on va trier simultanément les vis et les écrous en s'inspirant du \emph{tri rapide}.
+
+\begin{enumerate}
+\item S'il y a une vis et un écrou alors c'est terminé.
+\item On partitionne les vis à l'aide d'un pivot $e_i$ choisi dans les écrous.
+  On mémorise durant cette étape l'unique vis $v_i$ associée à $e_i$.
+\item On partitionne les écrous à l'aide du pivot $v_i$.
+\item \`{A} la fin des étapes 1 et 2, les deux partitions coïncident. De plus, on a associé $e_i$ à $v_i$.
+  On reprend alors à l'étape 1 pour les vis inférieurs à $e_i$ et les écrous inférieurs à $v_i$, de même pour les parties supérieures.
+\end{enumerate}
+
+\inputminted[mathescape, firstline=10, lastline=31]{python}{vis_ecrou.py}
+
+\end{document}

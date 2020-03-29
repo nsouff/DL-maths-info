@@ -1,0 +1,30 @@
+\documentclass[td7.tex]{subfiles}
+
+\begin{document}
+
+\section*{Exercice 2}
+\inputminted{python}{triRapide.py}
+
+\subsection*{Question 1}
+\begin{itemize}
+\item Le pire cas arrive lorsque le pivot sépare le tableau de taille $n$ en une partie vide et en une partie de taille $n-1$. La taille de la pile est alors en $O(n)$.
+\item Le meilleur cas arrive lorsque le pivot choisi est la médiane.
+  Le tableau est donc séparer en deux parties de même taille. La taille de la pile est alors en $O(\log(n))$.
+\end{itemize}
+
+
+\subsection*{Question 2}
+\begin{itemize}
+\item Sur l'entrée $[1, \dots, n]$, la pile atteint une hauteur de 1. En effet, la récursion est appelée sur la partie gauche vide.
+\item Sur l'entrée $[n, \dots, 1]$, la pile atteint une hauteur en $O(n)$. La récursion est appelée sur la partie gauche de taille $n-1$. 
+\end{itemize}
+
+\subsection*{Question 3}
+Il faut effectuer la récursion sur la partie la plus petite.
+Le pire cas (taille de la pile) se produit lorsque les deux parties sont de même taille, la pile atteint alors une hauteur en $O(\log(n))$.
+
+\subsection*{Question 4}
+Le meilleur cas pour la hauteur de la pile se produit sur des entrées comme $[1, \dots, n]$ ou $[n, \dots, 1]$, la pile a une hauteur en $O(1)$.
+Cela correspond à des appels récursifs sur des tableaux de taille inférieur à 1.
+
+\end{document}

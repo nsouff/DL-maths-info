@@ -1,0 +1,33 @@
+\documentclass[td7.tex]{subfiles}
+
+\begin{document}
+
+\section*{Exercice 4}
+\subsection*{Question 1}
+\inputminted[mathescape, firstline=31, lastline=39]{python}{problemeDrapeauHollandais.py}
+
+\subsection*{Question 2}
+\inputminted[mathescape, firstline=41, lastline=47]{python}{problemeDrapeauHollandais.py}
+
+\subsection*{Question 3}
+\inputminted[mathescape, firstline=49, lastline=61]{python}{problemeDrapeauHollandais.py}
+Les variables bleu, rouge et blanc agissent comme des frontières :
+\begin{itemize}
+\item bleu est le premier indice après la zone bleue
+\item blanc est le premier indice après la zone blanche
+\item rouge est le premier indice avant la zone rouge
+\end{itemize}
+
+\subsection*{Question 4}
+On peut considérer :
+
+\begin{itemize}
+\item la zone bleue comme les éléments inférieurs au pivot.
+\item la zone blanche comme les éléments égaux au pivot.
+\item la zone rouge comme les éléments supérieurs au pivot.
+\end{itemize}
+On effectue alors un appel récursif sur la zone bleue et sur la zone rouge.
+
+\inputminted[firstline=63, lastline=88]{python}{problemeDrapeauHollandais.py}
+
+\end{document}
